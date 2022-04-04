@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_rental_game,access.rental.game,model_rental_game,,1,1,1,1
+access_rental_publisher,access.rental.publisher,model_rental_publisher,,1,1,1,1
+access_rental_game,access.rental.game,model_rental_game,,1,1,1,1
+access_rental_playstation,access.rental.playstation,model_rental_playstation,,1,1,1,1
+access_rental_perlengkapan,access.rental.perlengkapan,model_rental_perlengkapan,,1,1,1,1
+access_rental_katalog,access.rental.katalog,model_rental_katalog,,1,1,1,1
+access_rental_order,access.rental.order,model_rental_order,,1,1,1,1
+access_rental_order_detail,access.rental.order_detail,model_rental_order_detail,,1,1,1,1
+access_rental_order_gamedetail,access.rental.order_gamedetail,model_rental_order_gamedetail,,1,1,1,1

@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="nugroho.list">
+      <field name="name">Nugroho list</field>
+      <field name="model">nugroho.nugroho</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="nugroho.action_window">
+      <field name="name">Nugroho window</field>
+      <field name="res_model">nugroho.nugroho</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="nugroho.action_server">
+      <field name="name">Nugroho server</field>
+      <field name="model_id" ref="model_nugroho_nugroho"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="Nugroho" id="nugroho.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="nugroho.menu_1" parent="nugroho.menu_root"/>
+    <menuitem name="Menu 2" id="nugroho.menu_2" parent="nugroho.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="nugroho.menu_1_list" parent="nugroho.menu_1"
+              action="nugroho.action_window"/>
+    <menuitem name="Server to list" id="nugroho" parent="nugroho.menu_2"
+              action="nugroho.action_server"/>
+-->
+  </data>
+</odoo>

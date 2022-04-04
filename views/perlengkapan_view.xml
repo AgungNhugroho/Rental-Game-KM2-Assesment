@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- rental.perlengkapan tree view -->
+    <record id="rental_perlengkapan_view_tree" model="ir.ui.view">
+        <field name="name">Perlengkapan</field>
+        <field name="model">rental.perlengkapan</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="deskripsi"/>
+                <field name="harga"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- rental.perlengkapan form view -->
+    <record id="rental_perlengkapan_view_form" model="ir.ui.view">
+        <field name="name">perlengkapan</field>
+        <field name="model">rental.perlengkapan</field>
+        <field name="arch" type="xml">
+            <form string="Daftar Perlengkapan">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="name"/>
+                        <field name="tipe"/>
+                        <field name="harga"/>
+                    </group>
+
+                    <group>
+                        <field name="deskripsi"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- rental.perlengkapan action window -->
+    <record id="rental_perlengkapan_action" model="ir.actions.act_window">
+        <field name="name">Perlengkapan</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">rental.perlengkapan</field>
+        <field name="view_mode">tree,form</field>
+        
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem 
+        id="rental_perlengkapan_menu_act" 
+        name="Pheriperal" 
+        parent="rental_menu_categ" 
+        action="rental_perlengkapan_action" 
+        sequence="30"/>
+
+</odoo>

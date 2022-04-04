@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- rental.game tree view -->
+    <record id="rental_game_view_tree" model="ir.ui.view">
+        <field name="name">Game</field>
+        <field name="model">rental.game</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="deskripsi"/>
+                <field name="harga"/>
+                <field name="katalogorder_ids"/>
+                <field name="stok"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- rental.katalog form view -->
+    <record id="rental_game_view_form" model="ir.ui.view">
+        <field name="name">Rental Game</field>
+        <field name="model">rental.game</field>
+        <field name="arch" type="xml">
+            <form string="Daftar Katalog">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="name"/>
+                        <field name="deskripsi"/>
+                    </group>
+                    <group>
+                        <field name="playstation_id"/>
+                        <field name="perlengkapan_id"/>
+                        <field name="katalog_id"/>
+                    </group>
+
+                    <group>
+                        <field name="harga"/>
+                        <field name="stok"/>
+                    </group>
+                    <notebook>
+                        <page string="Order Detail">
+                            <field name="katalogorder_ids">
+                                <tree>
+                                <!-- Add your fields here -->
+                                    <field name="name"/> 
+                                    <field name="qty"/>        
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- rental.game action window -->
+    <record id="rental_game_action" model="ir.actions.act_window">
+        <field name="name">Daftar Game</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">rental.game</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem 
+        id="_etalase_game_menu_act"
+        name="Katalog Rental" 
+        parent="rental_menu_categ" 
+        action="rental_game_action" 
+        sequence="10"/>
+
+</odoo>

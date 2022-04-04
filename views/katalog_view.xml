@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- rental.katalog tree view -->
+    <record id="rental_katalog_view_tree" model="ir.ui.view">
+        <field name="name">Katalog Game</field>
+        <field name="model">rental.katalog</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="deskripsi"/>
+                <field name="harga"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- rental.katalog form view -->
+    <record id="rental_katalog_view_form" model="ir.ui.view">
+        <field name="name">Katalog Game</field>
+        <field name="model">rental.katalog</field>
+        <field name="arch" type="xml">
+            <form string="Daftar Katalog">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="name"/>
+                        <field name="deskripsi"/>
+                        <field name="tahun"/>
+                        <field name="genre"/>
+                        <field name="tipe"/>
+                        <field name="stok"/>
+                    </group>
+
+                    <group>
+                        <field name="harga"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- rental.katalog action window -->
+    <record id="rental_katalog_action" model="ir.actions.act_window">
+        <field name="name">Katalog</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">rental.katalog</field>
+        <field name="view_mode">tree,form</field>
+        
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem 
+        id="rental_katalog_menu_act" 
+        name="Katalog Game" 
+        parent="rental_menu_categ" 
+        action="rental_katalog_action" 
+        sequence="40"/>
+
+</odoo>
