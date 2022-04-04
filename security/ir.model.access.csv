@@ -8,3 +8,4 @@ access_rental_katalog,access.rental.katalog,model_rental_katalog,,1,1,1,1
 access_rental_order,access.rental.order,model_rental_order,,1,1,1,1
 access_rental_order_detail,access.rental.order_detail,model_rental_order_detail,,1,1,1,1
 access_rental_order_gamedetail,access.rental.order_gamedetail,model_rental_order_gamedetail,,1,1,1,1
+access_renta_pengembalian,access.rental.pengembalian,model_rental_pengembalian,,1,1,1,1

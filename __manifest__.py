@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Nugroho",
+    'name': "RENTAL GAME",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Rental Game KM 2""",
 
     'description': """
         Long description of module's purpose
@@ -35,6 +34,7 @@
         'views/katalog_view.xml',
         'views/order_view.xml',
         'views/pegawai_rental_view.xml',
+        'views/pengembalian_view.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
