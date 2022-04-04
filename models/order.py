@@ -18,6 +18,10 @@ class order(models.Model):
     name = fields.Char(string='kode Order', required=True)
     tanggal_order = fields.Datetime('Tanggal Order', default=fields.Datetime.now())
     tanggal_sewa = fields.Date(string='Tanggal Sewa', default=fields.Date.today())
+    pemesan = fields.Many2one(
+        comodel_name='res.partner', 
+        string='Pemesan', 
+        domain=[('is_customer','=', True)],store=True)
     total = fields.Integer(compute='_compute_total', string='Total', store=True)
     
     @api.depends('katalogorder_ids')

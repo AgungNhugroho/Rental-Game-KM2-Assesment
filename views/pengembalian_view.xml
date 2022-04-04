@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- model.name tree view -->
+    <record id="rental_pengembalian_tree" model="ir.ui.view">
+        <field name="name">Daftar Pengembalian Item</field>
+        <field name="model">rental.pengembalian</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="order"/>
+                <field name="name"/>
+                <field name="balik"/>
+                <field name="tagihan"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- model.name form view -->
+    <record id="rental_pengembaliane_view_form" model="ir.ui.view">
+        <field name="name">Pengembalian Item</field>
+        <field name="model">rental.pengembalian</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="order"/>
+                        <field name="name"/>
+                        <field name="balik"/>
+                        <field name="tagihan"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- model.name action window -->
+    <record id="rental_pengembalian_action" model="ir.actions.act_window">
+        <field name="name">Pengembalian Item</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">rental.pengembalian</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+    <menuitem 
+        id="rental_pengembalian_menu_act" 
+        name="Pengembalian" 
+        parent="rental_order_menu_categ" 
+        action="rental_pengembalian_action" 
+        sequence="20"/>
+    
+
+</odoo>

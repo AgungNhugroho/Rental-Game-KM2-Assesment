@@ -29,6 +29,7 @@
                         <field name="name"/>
                         <field name="tanggal_order"/>
                         <field name="tanggal_sewa"/>
+                        <field name="pemesan"/>
                         <field name="total"/>
                         <field name="katalogorder_ids">
                             <tree editable='bottom'>
